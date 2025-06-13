@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Играем в бадминтон?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1 class="app-header">Играем в бадминтон?</h1>
+
+        <div class="input-group">
+            <label for="dayOfWeek" class="input-label">День недели:</label>
+            <select id="dayOfWeek" class="input-field">
+                <option value="monday">Понедельник</option>
+                <option value="tuesday">Вторник</option>
+                <option value="wednesday">Среда</option>
+                <option value="thursday">Четверг</option>
+                <option value="friday">Пятница</option>
+                <option value="saturday">Суббота</option>
+                <option value="sunday">Воскресенье</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="temperature" class="input-label">Температура:</label>
+            <select id="temperature" class="input-field">
+                <option value="hot">Жарко</option>
+                <option value="warm">Тепло</option>
+                <option value="cold">Холодно</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="precipitation" class="input-label">Осадки:</label>
+            <select id="precipitation" class="input-field">
+                <option value="clear">Ясно</option>
+                <option value="cloudy">Облачно</option>
+                <option value="rain">Дождь</option>
+                <option value="snow">Снег</option>
+                <option value="hail">Град</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="wind" class="input-label">Ветер:</label>
+            <select id="wind" class="input-field">
+                <option value="yes">Есть</option>
+                <option value="no">Нет</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="humidity" class="input-label">Влажность:</label>
+            <select id="humidity" class="input-field">
+                <option value="high">Высокая</option>
+                <option value="low">Низкая</option>
+            </select>
+        </div>
+
+        <button class="action-button" onclick="checkBadmintonConditions()">Проверить!</button>
+
+        <p id="resultOutput" class="result-output">Нажмите "Проверить!", чтобы узнать!</p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

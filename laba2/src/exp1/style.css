@@ -1,0 +1,83 @@
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #3f37c9;
+    --text-color: #2b2d42;
+    --light-color: #f8f9fa;
+    --error-color: #ef233c;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #edf2f4;
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+.app-container {
+    max-width: 32rem;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.app-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-label {
+    font-weight: 600;
+}
+
+.age-input {
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+}
+
+.age-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(67, 97, 238, 0.25);
+}
+
+.action-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.action-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.result-output {
+    display: block;
+    padding: 1rem;
+    background-color: var(--light-color);
+    border-radius: 0.25rem;
+    text-align: center;
+    font-size: 1.1rem;
+    min-height: 1.5rem;
+}
+
+.error-message {
+    color: var(--error-color);
+}

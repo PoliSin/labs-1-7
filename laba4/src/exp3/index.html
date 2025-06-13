@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Средняя температура</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Анализ показаний датчиков</h2>
+    <textarea id="inputData" placeholder="Введите строку (макс 512 символов)..."></textarea>
+
+    <label for="sortBy">Сортировать по:</label>
+    <select id="sortBy">
+      <option value="id">ID датчика</option>
+      <option value="temp">Средняя температура</option>
+    </select>
+
+    <button onclick="handleClick()">Рассчитать</button>
+
+    <pre id="output">Вывод появится здесь...</pre>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Автор и Книга</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Информация о книге</h1>
+
+    <label for="authorName">Имя автора:</label>
+    <input type="text" id="authorName" placeholder="Введите имя автора" />
+
+    <label for="birthYear">Год рождения автора:</label>
+    <input type="number" id="birthYear" placeholder="Введите год рождения" />
+
+    <button id="setAuthorBtn">Установить автора</button>
+
+    <div class="output">
+      <h2>Информация об авторе:</h2>
+      <p id="authorInfo">Автор не установлен</p>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #3f51b5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    overflow: hidden;
+}
+
+.app-container {
+    max-width: 600px;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 3rem;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: #1a202c;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+    color: #4a4a4a;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.input-field {
+    width: 100%;
+    padding: 1.1rem 1.2rem;
+    border: 2px solid #a0aec0;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    color: #333;
+    background-color: #f7fafc;
+    transition: border-color 0.3s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%204%205%22%3E%3Cpath%20fill%3D%22%234a4a4a%22%20d%3D%22M2%200L0%202h4L2%200zm0%205L0%203h4L2%205z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 1.2rem center;
+    background-size: 12px 14px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.input-field:focus {
+    border-color: #3f51b5;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(63, 81, 181, 0.4);
+    background-color: #ffffff;
+}
+
+.action-button {
+    width: 100%;
+    padding: 1.2rem 1.8rem;
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 2.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.action-button:hover {
+    background-color: #303f9f;
+}
+
+.result-output {
+    margin-top: 3rem;
+    padding: 1.8rem;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 900;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.result-output.no {
+    background-color: #ef5350;
+    color: #ffffff;
+    box-shadow: 0 5px 10px rgba(239, 83, 80, 0.3);
+}
+
+.result-output:not(.no) {
+    background-color: #66bb6a;
+    color: #ffffff;
+    box-shadow: 0 5px 10px rgba(102, 187, 106, 0.3);
+}

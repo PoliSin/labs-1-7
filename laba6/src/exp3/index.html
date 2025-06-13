@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Контейнер с наибольшей водой</title>
+  <style>
+    canvas {
+      border: 1px solid #000;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h3>Введите числа через запятую:</h3>
+  <input type="text" id="input" value="1,8,6,2,5,4,8,3,7" />
+  <button onclick="calculate()">Посчитать</button>
+  <p>Максимальный объем воды: <span id="result">-</span></p>
+  <canvas id="chart" width="500" height="300"></canvas>
+
+  <script src="main.js"></script>
+</body>
+</html>

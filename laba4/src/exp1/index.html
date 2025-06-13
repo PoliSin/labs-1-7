@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Поиск строк</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Поиск вхождений строки</h2>
+
+    <label for="needle">Что ищем:</label>
+    <input type="text" id="needle" placeholder="например, aa">
+
+    <label for="haystack">Где ищем:</label>
+    <textarea id="haystack" rows="4" placeholder="введите строки через пробел или с новой строки"></textarea>
+
+    <button id="countBtn">Посчитать</button>
+
+    <div class="result" id="result">Результат появится здесь</div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
