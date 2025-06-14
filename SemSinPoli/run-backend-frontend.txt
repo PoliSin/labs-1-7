@@ -1,0 +1,30 @@
+git checkout main  #переключиться на главнкю ветку с ихсодными файлами без бэкенда
+
+git checkout feature/app-mongo   #переключиться на ветку с файлами бэкенда - пока не запускается.
+
+
+1
+Запускаешь в терминале сервер базы монгодб:
+
+/Applications/mongodb-macos-aarch64-8.0.10/bin/mongod --dbpath ~/data/db --logpath ~/data/mongo.log --fork
+
+
+2
+Запуск бэкэнда:
+cd /Users/polinasinitsyna/Documents/VS Code files/SemSinPoli/server
+npx ts-node server.ts
+
+
+Проверка запроса на бэкенд - запись данных в монгу ({"title": "Первая задача"})
+
+curl -v -X POST http://localhost:5555/api/tasks \
+  -H "Content-Type: application/json" \
+  -d '{"title": "Первая задача"}'
+
+
+3
+Запуск фронтенда:
+
+cd /Users/polinasinitsyna/Documents/VS Code files/SemSinPoli/client
+npx http-server -p 3000
+
