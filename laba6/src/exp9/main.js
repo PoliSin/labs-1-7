@@ -1,20 +1,21 @@
+"use strict";
 function isValid(s) {
-    var stack = [];
-    var pairs = {
+    const stack = [];
+    const pairs = {
         ')': '(',
         '}': '{',
         ']': '[',
     };
-    for (var i = 0; i < s.length; i++) {
-        var ch = s[i];
+    for (let i = 0; i < s.length; i++) {
+        const ch = s[i];
         if (ch === '(' || ch === '{' || ch === '[') {
             stack.push(ch);
         }
         else if (ch === ')' || ch === '}' || ch === ']') {
             if (stack.length === 0)
                 return false;
-            var top_1 = stack.pop();
-            if (top_1 !== pairs[ch]) {
+            const top = stack.pop();
+            if (top !== pairs[ch]) {
                 return false;
             }
         }
@@ -25,18 +26,18 @@ function isValid(s) {
     }
     return stack.length === 0;
 }
-window.onload = function () {
-    var input = document.getElementById('inputString');
-    var button = document.getElementById('checkBtn');
-    var result = document.getElementById('result');
-    button.onclick = function () {
-        var text = input.value.trim();
+window.onload = () => {
+    const input = document.getElementById('inputString');
+    const button = document.getElementById('checkBtn');
+    const result = document.getElementById('result');
+    button.onclick = () => {
+        const text = input.value.trim();
         if (text === '') {
             result.textContent = 'Пожалуйста, введите строку.';
             result.style.color = 'red';
             return;
         }
-        var valid = isValid(text);
+        const valid = isValid(text);
         if (valid) {
             result.textContent = 'Строка валидна ✅';
             result.style.color = 'green';

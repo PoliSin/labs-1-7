@@ -1,27 +1,28 @@
-var inputEl = document.getElementById('input');
-var button = document.getElementById('process');
-var output = document.getElementById('output');
-button.addEventListener('click', function () {
-    var lines = inputEl.value.trim().split('\n');
+"use strict";
+const inputEl = document.getElementById('input');
+const button = document.getElementById('process');
+const output = document.getElementById('output');
+button.addEventListener('click', () => {
+    const lines = inputEl.value.trim().split('\n');
     if (lines.length === 0)
         return;
-    var index = 0;
-    var studentCount = parseInt(lines[index++]);
-    var students = [];
-    for (var i = 0; i < studentCount; i++) {
-        var langCount = parseInt(lines[index++]);
-        var langs = new Set();
-        for (var j = 0; j < langCount; j++) {
+    let index = 0;
+    const studentCount = parseInt(lines[index++]);
+    const students = [];
+    for (let i = 0; i < studentCount; i++) {
+        const langCount = parseInt(lines[index++]);
+        const langs = new Set();
+        for (let j = 0; j < langCount; j++) {
             langs.add(lines[index++]);
         }
         students.push(langs);
     }
     // Языки, которые знают все
-    var commonArr = [];
-    var firstStudent = students[0];
+    const commonArr = [];
+    const firstStudent = students[0];
     firstStudent.forEach(function (lang) {
-        var knownByAll = true;
-        for (var i = 1; i < students.length; i++) {
+        let knownByAll = true;
+        for (let i = 1; i < students.length; i++) {
             if (!students[i].has(lang)) {
                 knownByAll = false;
                 break;
@@ -32,14 +33,14 @@ button.addEventListener('click', function () {
         }
     });
     // Языки, которые знает хотя бы один
-    var allLangs = new Set();
-    for (var i = 0; i < students.length; i++) {
+    const allLangs = new Set();
+    for (let i = 0; i < students.length; i++) {
         students[i].forEach(function (lang) {
             allLangs.add(lang);
         });
     }
     // Преобразуем Set в массив
-    var allArr = [];
+    const allArr = [];
     allLangs.forEach(function (lang) {
         allArr.push(lang);
     });
@@ -47,10 +48,10 @@ button.addEventListener('click', function () {
     commonArr.sort();
     allArr.sort();
     // Формируем вывод
-    var result = '';
-    result += "".concat(commonArr.length, "\n");
+    let result = '';
+    result += `${commonArr.length}\n`;
     result += commonArr.join('\n') + '\n';
-    result += "".concat(allArr.length, "\n");
+    result += `${allArr.length}\n`;
     result += allArr.join('\n');
     output.textContent = result;
 });

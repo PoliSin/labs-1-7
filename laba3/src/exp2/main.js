@@ -10,7 +10,7 @@ class Восьмиугольник {
         return this.радиус;
     }
     площадь() {
-        return 2 * (1 + Math.SQRT2) * Math.pow(this.радиус, 2);
+        return 2 * (1 + Math.SQRT2) * this.радиус ** 2;
     }
     периметр() {
         const сторона = this.радиус * Math.SQRT2;
