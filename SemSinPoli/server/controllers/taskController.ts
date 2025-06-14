@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import Task from '../models/Task';
+=======
+import Task from '../models/taskModel';
+>>>>>>> cbe9866 (add project files)
 import { Request, Response } from 'express';
 
 export const getTasks = async (req: Request, res: Response) => {

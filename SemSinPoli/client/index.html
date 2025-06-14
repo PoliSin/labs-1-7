@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Training Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="settings-modal-overlay" class="modal-overlay" style="display:none;">
+    <div class="modal">
+        <h3>Copy From:</h3>
+        <div class="modal-option" id="settings-year">YEAR: <span id="settings-year-val">2025</span></div>
+        <div class="modal-option" id="settings-month">MONTH: <span id="settings-month-val">January</span></div>
+        <div class="modal-option" id="settings-week">WEEK: <span id="settings-week-val">1</span></div>
+        <div class="modal-actions">
+            <button id="settings-ok">Copy</button>
+            <button id="settings-cancel">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<div id="modal-overlay" class="modal-overlay" style="display:none;">
+    <div class="modal">
+        <h3 id="modal-title"></h3>
+        <form id="modal-form"></form>
+        <div class="modal-actions">
+            <button id="modal-ok">OK</button>
+            <button id="modal-cancel">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="top-bar">
+        <div class="left-controls">
+            <button id="year-btn" class="blue-btn">YEAR</button>
+            <button id="week-btn" class="cream-btn">WEEK</button>
+        </div>
+        <div class="title-box">
+            <div class="title-inner">TRAINING PLANNER</div>
+        </div>
+        <div class="right-controls">
+            <button id="settings-btn" class="blue-btn">COPY FROM</button>
+            <button id="month-btn" class="cream-btn">MONTH</button>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="day">
+            <div class="day-title">MONDAY</div>
+            <textarea></textarea>
+        </div>
+        <div class="day">
+            <div class="day-title">TUESDAY</div>
+            <textarea></textarea>
+        </div>
+        <div class="day">
+            <div class="day-title">WEDNESDAY</div>
+            <textarea></textarea>
+        </div>
+        <div class="day">
+            <div class="day-title">THURSDAY</div>
+            <textarea></textarea>
+        </div>
+        <div class="day">
+            <div class="day-title">FRIDAY</div>
+            <textarea></textarea>
+        </div>
+        <div class="day">
+            <div class="day-title">SATURDAY</div>
+            <textarea></textarea>
+        </div>
+        <div class="day">
+            <div class="day-title">SUNDAY</div> <textarea></textarea>
+        </div>
+        <div class="day">
+            <div class="day-title red-title">NOTES</div>
+            <textarea></textarea>
+        </div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

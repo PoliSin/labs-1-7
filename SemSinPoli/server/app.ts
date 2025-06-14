@@ -1,6 +1,10 @@
 import express from 'express';
 import cors from 'cors';
+<<<<<<< HEAD
 import taskRoutes from './routes/tasks';
+=======
+import taskRoutes from './routes/taskRoutes';
+>>>>>>> cbe9866 (add project files)
 
 const app = express();
 
